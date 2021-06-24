@@ -1,0 +1,127 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75); /* (paragraphs) */
+  --Very-light-gray: hsl(0, 0%, 95%); /* (background, headings, buttons) */
+}
+body {
+  margin: 40px auto 40px auto;
+  padding: 0;
+  box-sizing: border-box;
+  width: 80%;
+  background-color: var(--Very-light-gray);
+  /* justify-content: center;
+  align-content: center; */
+}
+h1 {
+  font-family: Big Shoulders Display, sans-serif;
+  text-transform: uppercase;
+  color: var(--Very-light-gray);
+  padding: 0 0 5px 0;
+}
+p {
+  font-family: Lexend Deca, sans-serif;
+  font-size: 15px;
+  color: var(--Transparent-white);
+}
+
+button {
+  background-color: var(--Very-light-gray);
+  border-radius: 30px;
+  width: 180px;
+  height: 45px;
+  border: none;
+  text-align: center;
+  margin: 10px 0 20px 0;
+  font-family: Lexend Deca, sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  border: white 2px solid;
+}
+
+.cont1 {
+  background-color: var(--Bright-orange);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.cont2 {
+  background-color: var(--Dark-cyan);
+}
+.cont3 {
+  background-color: var(--Very-dark-cyan);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.cont1,
+.cont2,
+.cont3 {
+  padding: 20px 25px 10px 30px;
+  line-height: 25px;
+}
+.cont1 button {
+  color: var(--Bright-orange);
+}
+.cont2 button {
+  color: var(--Dark-cyan);
+}
+.cont3 button {
+  color: var(--Very-dark-cyan);
+}
+button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+img {
+  padding: 5px 0 5px 0;
+}
+@media (min-width: 550px) {
+  body {
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    width: 1400px;
+    height: 700px;
+    background-color: var(--Very-light-gray);
+    display: grid;
+    grid-template-columns: repeat(3, 320px);
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+    /* align-content: center; */
+  }
+  .cont1,
+  .cont2,
+  .cont3 {
+    padding: 40px 40px 20px 30px;
+    line-height: 25px;
+    width: 250px;
+    height: 400px;
+    border-radius: 0;
+  }
+  .cont1 {
+    grid-column: 1/2;
+
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  .cont2 {
+    grid-column: 2/3;
+  }
+
+  .cont3 {
+    grid-column: 3/-1;
+
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  h1 {
+    margin-bottom: 40px;
+  }
+  p {
+    margin-bottom: 50px;
+  }
+}
